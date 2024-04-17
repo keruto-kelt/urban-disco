@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>ホームページ</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/change.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/binary.js"></script>
+<script src="js/youtube.js"></script>
+<script src="js/calculate.js"></script>
+<script src="js/memo.js"></script>
+<script src="js/calendar.js"></script>
+</head>
+<body onload="load()">
+        <h1>Savannah</h1>
+        <br>
+        保存できるメモ
+        <textarea name ="memodata" id="memodata_in" class="memo"></textarea>
+        <p id="memodata_out"></p>
+        <input type="button" value="保存" onclick="save()">
+        <input type="button" value="保存確認" onclick="view()">
+        <input type="button" value="削除" onclick="del()">
+        <br>
+        <br>
+        <h2>本日の予定</h2>
+        <h3 id="schedulemsg"></h3>
+        <br>
+        <br>
+        <div id="calendar" class="calendar-wrap"></div>
+        <br>
+        <input type="button" value="カレンダー内容の保存" onclick="calendarsave()">
+        <input type="button" value="カレンダー内容の確認" onclick="calendarview()">
+        <input type="button" value="カレンダー内容の全削除" onclick="calendardel()">
+        <p id="calendarsavemsg"></p>
+        <p id="calendarviewmsg"></p>
+        <p id="calendardelmsg"></p>
+        <br>
+        <div class="field">
+            <video src="2024_3月_横浜国際決勝.MOV" width="600" height="350" controls muted loop poster="picture/サムネ.png"></video>
+            <video id="camera" width="350px" height="350px" autoplay muted playsinline></video>    
+        </div>
+        <br>
+        <p class="camerabutton">
+            <input type="button" value="カメラテスト" onclick="cameraInit()">
+        </p>
+        <h2>＊数字は半角で入力してください</h2>
+        <br>
+        <p>
+            <h2>入力電卓</h2>
+            <br>
+            <label>
+                例:1+1->2&nbsp;*計算順を正しくできていないため未完成*
+                <br>
+                <input type="text" id="cal" size="25">
+            </label>
+            <input type="button" value="計算" onclick="calClick()">
+            <input type="button" value="分数として計算" onclick="varClick()">
+        </p>
+        <p id="calmsg"></p>
+        <p>
+            メモ欄
+            <textarea class="memo"></textarea>
+        </p>
+        <br>
+        <p>
+            <h2>金額を見やすくする</h2>
+            <br>
+            <label>
+                例:〇〇百万円->〇億〇万〇円
+                <input type="text" id="money" size="100">
+            </label>
+            <input type="button" value="変換" onclick="buttonClick()">
+        </p>
+        <p id="msg"></p>
+        <br>
+        <p>
+            <h2>2進数を見やすくする&10進数に変換する</h2>
+            <br>
+            <label>
+                例:10010101->1001,0101->149
+                <input type="text" id="binary" size="100">
+            </label>
+            <input type="button" value="変換" onclick="binClick()">
+        </p>
+        <p id="binmsg"></p>
+        <br>
+        <iframe id="youtube" onended ="hoge()" width="560" height="315" src="https://www.youtube.com/embed/22K6YnauqGM?si=Vpu7SWLc3ugkANwl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <input type="button" value="動画を変える" onclick="changeyoutube()">
+        <br>
+        <br>
+        <br>
+</body>
+</html>
