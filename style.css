@@ -67,6 +67,49 @@ span.search
     justify-content: space-around;
 }
 
+/**/
+
+.game
+{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    background-color: white;
+}
+
+.game > canvas
+{
+    position: absolute;
+}
+
+.ene
+{
+    top: 230px;
+    left: 430px;
+}
+
+.eneb
+{
+    top: 240px;
+    left: 410px;
+    display: block;
+}
+
+.pla
+{
+    top: 230px;
+    left: 20px;
+}
+
+.plab
+{
+    top: 245px;
+    left: 70px;
+    display: block;
+}
+
+/**/
+
 .memo
 {
     display: inline-block;
