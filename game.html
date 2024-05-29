@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>ブラウザゲーム</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/game.js"></script>
+</head>
+<body onload="gameload()">
+    <h1>Savannah</h1>
+    &emsp;
+    <audio src="./audio/ファンファーレ4.mp3" id="clear_audio"></audio>
+    <audio src="./audio/爆発1.mp3" id="lose_audio"></audio>
+    <audio src="./audio/パフ.mp3" id="pahu_audio"></audio>
+    <audio src="./audio/ハイキック.mp3" id="highkick_audio"></audio>
+    <audio src="./audio/ミドルキック.mp3" id="middlekick_audio"></audio>
+    <audio src="./audio/ローキック.mp3" id="lowkick_audio"></audio>
+    <audio src="./audio/ジャブ.mp3" id="punch_audio"></audio>
+    <audio src="./audio/ストレート.mp3" id="straight_audio"></audio>
+    <audio src="./audio/フック.mp3" id="fock_audio"></audio>
+    <audio src="./audio/エルボー.mp3" id="elbow_audio"></audio>
+    <audio src="./audio/チーン.mp3" id="teen_audio"></audio>
+    <audio src="./audio/ガード.mp3" id="guard_audio"></audio>
+    <audio src="./audio/うーわうーわ.mp3" id="uwa_audio"></audio>
+    <audio src="./audio/ユールーズ.mp3" id="youlose_audio"></audio>
+    <audio src="./audio/ユーウィン.mp3" id="youwin_audio"></audio>
+    <a href="home.html">ホームへ戻る</a>
+    &emsp;
+    <a href="cggame.html">ChatGPTが作ったゲーム</a>
+    <br>
+    <br>
+    <h2>シューティング</h2>
+    <div class="game">
+        <canvas class="ene" id="enemy" width="50" height="50">canvas要素をサポートしていません。</canvas>
+        <canvas class="pla" id="player" width="50" height="50">canvas要素をサポートしていません。</canvas>
+        <canvas class="eneb" id="widthenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
+        <canvas class="eneb" id="heightenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
+        <canvas class="plab" id="playerb" width="20" height="20">canvas要素をサポートしていません。</canvas>
+        <p id="count"></p>
+        <p id="clear"></p>
+    </div>
+    <br>
+    <input id="startbutton" type="button" value="スタート" onclick="start()">
+    <br>
+    <input type="button" value="ジャンプ" onclick="jump()">
+    <input type="button" value="発射" onclick="bomb()">
+    <br>
+    <br>
+    <h2>格闘</h2>
+    <div class="game">
+        <canvas class="gauge" id="gauge" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="gauge" id="gauge2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="gauge" id="redgauge" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="gauge" id="redgauge2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="armplayer" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="armplayer2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="armplayer3" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="armplayer4" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="bodyplayer" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="bodyplayer2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="legplayer" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="legplayer2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="legplayer3" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="faceplayer" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="earm" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="earm2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="earm3" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="earm4" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="ebody" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="ebody2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="eleg" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="eleg2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="eleg3" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <canvas class="fplay" id="eface" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <br>
+        <p id="result"></p>
+    </div>
+    <br>
+    <input id="fstartbutton" type="button" value="スタート" onclick="fightstart()">
+    <input id="secondbutton" type="button" value="第二ステージへ" onclick="secondstart()">
+    <input id="threebutton" type="button" value="第三ステージへ" onclick="threestart()">
+    <input id="fourbutton" type="button" value="第四ステージへ" onclick="fourstart()">
+    <input id="restartbutton" type="button" value="再挑戦" onclick="restart()">
+    <input type="button" value="左移動" onclick="leftwalk()">
+    <input type="button" value="右移動" onclick="rightwalk()">
+    <input type="button" value="ジャブ" onclick="punch()">
+    <input type="button" value="ストレート" onclick="straightpunch()">
+    <input type="button" value="フック" onclick="fock()">
+    <input type="button" value="肘打ち" onclick="elbow()">
+    <input type="button" value="ローキック" onclick="lowkick()">
+    <input type="button" value="ミドルキック" onclick="middlekick()">
+    <input type="button" value="ハイキック" onclick="highkick()">
+    <input type="button" value="ハイガード" onclick="highguard()">
+    <br>
+    <br>
+    <br>
+</body>
+</html>
