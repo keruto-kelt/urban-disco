@@ -134,6 +134,7 @@ function gameload()
     const endbutton = document.getElementById('endbutton');
     endbutton.style.display = 'none';
     document.getElementById("result").innerText = '';
+    document.getElementById("manual").innerHTML = '難易度を選択してスタートするとキー設定がここに出る';
 
     var armcanvas = document.getElementById('armplayer');
         var armcontext = armcanvas.getContext('2d');
