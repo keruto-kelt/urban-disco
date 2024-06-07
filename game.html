@@ -24,12 +24,23 @@
     <audio src="うーわうーわ.mp3" id="uwa_audio"></audio>
     <audio src="ユールーズ.mp3" id="youlose_audio"></audio>
     <audio src="ユーウィン.mp3" id="youwin_audio"></audio>
-    <a href="index.html">ホームへ戻る</a>
+    <audio src="サイヤ伝説.mp3" id="saiya_audio"></audio>
+    <audio src="ジェクト.mp3" id="ject_audio"></audio>
+    <audio src="さらに名を冠する者たち.mp3" id="name_audio"></audio>
+    <audio src="オメガルガール.mp3" id="rugal_audio"></audio>
+    <audio src="スペルビア.mp3" id="sperubire_audio"></audio>
+    <audio src="セレクト画面.mp3" id="select_audio"></audio>
+    <audio src="ジーク.mp3" id="zic_audio"></audio>
+    <a href="home.html">ホームへ戻る</a>
     &emsp;
+    <a href="cggame.html">ChatGPTが作ったゲーム</a>
+    &emsp;
+    <a href="quest.html">クエスト</a>
     <br>
     <br>
     <h2>シューティング</h2>
     <div class="game">
+        <input class="st" id="startbutton" type="button" value="スタート" onclick="start()">
         <canvas class="ene" id="enemy" width="50" height="50">canvas要素をサポートしていません。</canvas>
         <canvas class="pla" id="player" width="50" height="50">canvas要素をサポートしていません。</canvas>
         <canvas class="eneb" id="widthenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
@@ -38,15 +49,13 @@
         <p id="count"></p>
         <p id="clear"></p>
     </div>
+    <p id="man"></p>
     <br>
-    <input id="startbutton" type="button" value="スタート" onclick="start()">
-    <br>
-    <input type="button" value="ジャンプ" onclick="jump()">
-    <input type="button" value="発射" onclick="bomb()">
-    <br>
-    <br>
-    <h2>格闘</h2>
+    <h2>続ファーストファイト</h2>
     <div class="game">
+        <input class="hard" id="hard" type="button" value="ハード" onclick="fightstart()">
+        <input class="normal" id="normal" type="button" value="ノーマル" onclick="normalstart()">
+        <input class="easy" id="easy" type="button" value="イージー" onclick="easystart()">
         <canvas class="gauge" id="gauge" width="1000" height="300">canvas要素をサポートしていません。</canvas>
         <canvas class="gauge" id="gauge2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
         <canvas class="gauge" id="redgauge" width="1000" height="300">canvas要素をサポートしていません。</canvas>
@@ -71,6 +80,42 @@
         <canvas class="fplay" id="eleg2" width="1000" height="300">canvas要素をサポートしていません。</canvas>
         <canvas class="fplay" id="eleg3" width="1000" height="300">canvas要素をサポートしていません。</canvas>
         <canvas class="fplay" id="eface" width="1000" height="300">canvas要素をサポートしていません。</canvas>
+        <p class="endlole" id="endlole1" style="display: none;">企画:ケルト</p>
+        <p class="endlole" id="endlole2" style="display: none;">キャラクターデザイン:ケルト</p>
+        <p class="endlole" id="endlole3" style="display: none;">原案・脚本:ケルト</p>
+        <p class="endlole" id="endlole4" style="display: none;">脚本協力:ケルト</p>
+        <p class="endlole" id="endlole5" style="display: none;">グラフィック:ケルト</p>
+        <p class="endlole" id="endlole6" style="display: none;">モーションデザイン:ケルト</p>
+        <p class="endlole" id="endlole7" style="display: none;">モーションポートレート・グラフィック:ケルト</p>
+        <p class="endlole" id="endlole8" style="display: none;">システムプランナー/進行管理:ケルト</p>
+        <p class="endlole" id="endlole9" style="display: none;">システムグラフィック/ムービー:ケルト</p>
+        <p class="endlole" id="endlole10" style="display: none;">ステージデザイン:ケルト</p>
+        <p class="endlole" id="endlole11" style="display: none;">キャラクターデザイン:ケルト</p>
+        <p class="endlole" id="endlole12" style="display: none;">スクリプト:ケルト</p>
+        <p class="endlole" id="endlole13" style="display: none;">構成協力:ケルト</p>
+        <p class="endlole" id="endlole14" style="display: none;">デバックテストプレイ:ケルト</p>
+        <p class="endlole" id="endlole15" style="display: none;">プロデューサー:ケルト</p>
+        <p class="endlole" id="endlole16" style="display: none;">ディレクター:ケルト</p>
+        <p class="endlole" id="endlole17" style="display: none;">プログラム:ケルト</p>
+        <p class="endlole" id="endlole18" style="display: none;">サポート:ケルト</p>        
+        <p class="endlole" id="endlole19" style="display: none;">音声担当:ケルト</p>
+        <p class="endlole" id="endlole20" style="display: none;">収録:ケルト</p>
+        <p class="endlole" id="endlole21" style="display: none;">絵コンテ・演出:ケルト</p>
+        <p class="endlole" id="endlole22" style="display: none;">作画監督:ケルト</p>
+        <p class="endlole" id="endlole23" style="display: none;">動画:ケルト</p>
+        <p class="endlole" id="endlole24" style="display: none;">仕上げ:ケルト</p>
+        <p class="endlole" id="endlole25" style="display: none;">撮影:ケルト</p>
+        <p class="endlole" id="endlole26" style="display: none;">制作進行:ケルト</p>
+        <p class="endlole" id="endlole27" style="display: none;">アニメーションプロデューサー:ケルト</p>
+        <p class="endlole" id="endlole28" style="display: none;">アニメーション制作:ケルト</p>
+        <p class="endlole" id="endlole29" style="display: none;">ーサウンドスタッフー</p>
+        <p class="endlole" id="endlole30" style="display: none;">音楽:ケルト</p>
+        <p class="endlole" id="endlole31" style="display: none;">サウンドエフェクト:ケルト</p>
+        <p class="endlole" id="endlole32" style="display: none;">プロモーションネゴシエーター:ケルト</p>
+        <p class="endlole" id="endlole33" style="display: none;">プロモーションマネージメント:ケルト</p>
+        <p class="endlole" id="endlole34" style="display: none;">セールスプロモーション:ケルト</p>
+        <p class="endlole" id="endlole35" style="display: none;">スペシャルサンクス:プレイしてくれた皆様</p>
+        <p class="endlole" id="endlole36" style="display: none;">Fin</p>
         <br>
         <p id="result"></p>
     </div>
@@ -79,17 +124,20 @@
     <input id="secondbutton" type="button" value="第二ステージへ" onclick="secondstart()">
     <input id="threebutton" type="button" value="第三ステージへ" onclick="threestart()">
     <input id="fourbutton" type="button" value="第四ステージへ" onclick="fourstart()">
+    <input id="nsecondbutton" type="button" value="第二ステージへ" onclick="nsecondstart()">
+    <input id="nthreebutton" type="button" value="第三ステージへ" onclick="nthreestart()">
+    <input id="nfourbutton" type="button" value="第四ステージへ" onclick="nfourstart()">
+    <input id="esecondbutton" type="button" value="第二ステージへ" onclick="esecondstart()">
+    <input id="ethreebutton" type="button" value="第三ステージへ" onclick="ethreestart()">
+    <input id="efourbutton" type="button" value="第四ステージへ" onclick="efourstart()">
+    <input id="endbutton" type="button" value="エンディング" onclick="endingstart()">
     <input id="restartbutton" type="button" value="再挑戦" onclick="restart()">
-    <input type="button" value="左移動" onclick="leftwalk()">
-    <input type="button" value="右移動" onclick="rightwalk()">
-    <input type="button" value="ジャブ" onclick="punch()">
-    <input type="button" value="ストレート" onclick="straightpunch()">
-    <input type="button" value="フック" onclick="fock()">
-    <input type="button" value="肘打ち" onclick="elbow()">
-    <input type="button" value="ローキック" onclick="lowkick()">
-    <input type="button" value="ミドルキック" onclick="middlekick()">
-    <input type="button" value="ハイキック" onclick="highkick()">
-    <input type="button" value="ハイガード" onclick="highguard()">
+    <input id="nrestartbutton" type="button" value="再挑戦" onclick="nrestart()">
+    <input id="erestartbutton" type="button" value="再挑戦" onclick="erestart()">
+    <p id="manual"></p>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
