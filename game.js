@@ -8572,6 +8572,7 @@ function nfourstart()
     highkickuse = 0;
     epunchuse = 0;
     estpunchuse = 0;
+    ebstpunchuse = 0;
     efpunchuse = 0;
     eelbowuse = 0;
     elowkickuse = 0;
