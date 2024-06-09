@@ -114,12 +114,6 @@ span.search
     position: absolute;
 }
 
-.ene
-{
-    top: 230px;
-    left: 430px;
-}
-
 .gauge
 {
   display: none;
@@ -130,36 +124,14 @@ span.search
   display: inline-block;
 }
 
-.eneb
+.battle
 {
-    top: 240px;
-    left: 410px;
-    display: block;
-}
-
-.pla
-{
-    top: 230px;
-    left: 20px;
-}
-
-.plab
-{
-    top: 245px;
-    left: 70px;
-    display: block;
-}
-
-.st
-{
-    display: block;
-    margin-top: 120px;
-    margin-left: 220px;
+  display: inline-block;
 }
 
 .hard
 {
-    display: block;
+    display: inline-block;
     margin-top: 20px;
     margin-left: 220px;
 }
@@ -168,14 +140,14 @@ span.search
 {
     display: block;
     margin-top: 20px;
-    margin-left: 220px;
+    margin-left: 365px;
 }
 
 .easy
 {
     display: block;
     margin-top: 20px;
-    margin-left: 220px;
+    margin-left: 365px;
 }
 
 /**/
