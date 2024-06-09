@@ -2,16 +2,13 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<title>ブラウザゲーム</title>
+<title>続ファーストファイト</title>
 <link rel="stylesheet" href="style.css">
 <script src="game.js"></script>
 </head>
 <body onload="gameload()">
     <h1>Savannah</h1>
     &emsp;
-    <audio src="ファンファーレ4.mp3" id="clear_audio"></audio>
-    <audio src="爆発1.mp3" id="lose_audio"></audio>
-    <audio src="パフ.mp3" id="pahu_audio"></audio>
     <audio src="ハイキック.mp3" id="highkick_audio"></audio>
     <audio src="ミドルキック.mp3" id="middlekick_audio"></audio>
     <audio src="ローキック.mp3" id="lowkick_audio"></audio>
@@ -30,27 +27,16 @@
     <audio src="オメガルガール.mp3" id="rugal_audio"></audio>
     <audio src="スペルビア.mp3" id="sperubire_audio"></audio>
     <audio src="セレクト画面.mp3" id="select_audio"></audio>
-    <audio src="ジーク.mp3" id="zic_audio"></audio>
     <a href="home.html">ホームへ戻る</a>
+    &emsp;
+    <a href="shouting.html">シューティングゲーム</a>
     <br>
     <br>
     <h2>クリアした後は画面を更新したほうが不具合が少ない</h2>
     <br>
-    <h2>シューティング</h2>
-    <div class="game">
-        <input class="st" id="startbutton" type="button" value="スタート" onclick="start()">
-        <canvas class="ene" id="enemy" width="50" height="50">canvas要素をサポートしていません。</canvas>
-        <canvas class="pla" id="player" width="50" height="50">canvas要素をサポートしていません。</canvas>
-        <canvas class="eneb" id="widthenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
-        <canvas class="eneb" id="heightenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
-        <canvas class="plab" id="playerb" width="20" height="20">canvas要素をサポートしていません。</canvas>
-        <p id="count"></p>
-        <p id="clear"></p>
-    </div>
-    <p id="man"></p>
-    <br>
     <h2>続ファーストファイト</h2>
     <div class="game">
+        <input class="battle" id="battle" type="button" value="2人対戦" onclick="buttlestart()">
         <input class="hard" id="hard" type="button" value="ハード" onclick="fightstart()">
         <input class="normal" id="normal" type="button" value="ノーマル" onclick="normalstart()">
         <input class="easy" id="easy" type="button" value="イージー" onclick="easystart()">
@@ -130,9 +116,16 @@
     <input id="efourbutton" type="button" value="第四ステージへ" onclick="efourstart()">
     <input id="endbutton" type="button" value="エンディング" onclick="endingstart()">
     <input id="restartbutton" type="button" value="再挑戦" onclick="restart()">
+    <input id="buttlerestartbutton" type="button" value="再戦" onclick="buttlestart()">
     <input id="nrestartbutton" type="button" value="再挑戦" onclick="nrestart()">
     <input id="erestartbutton" type="button" value="再挑戦" onclick="erestart()">
     <p id="manual"></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
