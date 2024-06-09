@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>シューティングゲーム</title>
+<link rel="stylesheet" href="shouting.css">
+<script src="shouting.js"></script>
+</head>
+<body onload="gameload()">
+    <h1>Savannah</h1>
+    &emsp;
+    <audio src="ファンファーレ4.mp3" id="clear_audio"></audio>
+    <audio src="爆発1.mp3" id="lose_audio"></audio>
+    <audio src="パフ.mp3" id="pahu_audio"></audio>
+    <audio src="ジーク.mp3" id="zic_audio"></audio>
+    <a href="home.html">ホームへ戻る</a>
+    &emsp;
+    <a href="game.html">続ファーストファイト</a>
+    <br>
+    <br>
+    <h2>クリアした後は画面を更新したほうが不具合が少ない</h2>
+    <br>
+    <h2>シューティング</h2>
+    <div class="game">
+        <input class="st" id="startbutton" type="button" value="スタート" onclick="start()">
+        <canvas class="ene" id="enemy" width="50" height="50">canvas要素をサポートしていません。</canvas>
+        <canvas class="pla" id="player" width="50" height="50">canvas要素をサポートしていません。</canvas>
+        <canvas class="eneb" id="widthenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
+        <canvas class="eneb" id="heightenemyb" width="20" height="20">canvas要素をサポートしていません。</canvas>
+        <canvas class="plab" id="playerb" width="20" height="20">canvas要素をサポートしていません。</canvas>
+        <p id="count"></p>
+        <p id="clear"></p>
+    </div>
+    <p id="man"></p>
+    <br>
+    <br>
+</body>
+</html>
