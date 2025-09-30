@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>家計簿</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/account.js"></script>
+</head>
+<body onload="load()">
+    <h1>Savannah</h1>
+    <p>とりあえず入力欄</p>
+    <input type="text" id="now" size="10" class="excel-cell">
+    <input value="送信" type="button" onclick="send()" />
+    <p id="today"></p>
+    <table class="acc">
+        <tr>
+            <th>家計簿</th>
+            <th id="4mo">4月</th>
+            <th id="5mo">5月</th>
+            <th id="6mo">6月</th>
+            <th id="7mo">7月</th>
+            <th id="8mo">8月</th>
+            <th id="9mo">9月</th>
+            <th id="10mo">10月</th>
+            <th id="11mo">11月</th>
+            <th id="12mo">12月</th>
+            <th id="1mo">1月</th>
+            <th id="2mo">2月</th>
+            <th id="3mo">3月</th>
+        </tr>
+        <tr>
+            <th>前月繰り越し額</th>
+            <th><input type="text" id="4cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2cf" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3cf" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>収入</th>
+            <th><input type="text" id="4i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2i" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3i" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>特別収入</th>
+            <th><input type="text" id="4si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2si" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3si" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>家賃</th>
+            <th><input type="text" id="4r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2r" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3r" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>食費</th>
+            <th><input type="text" id="4f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2f" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3f" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>光熱費</th>
+            <th><input type="text" id="4e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2e" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3e" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>水道代</th>
+            <th><input type="text" id="4w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2w" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3w" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>通信費</th>
+            <th><input type="text" id="4t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2t" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3t" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>遊び</th>
+            <th><input type="text" id="4p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2p" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3p" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>カード払い</th>
+            <th><input type="text" id="4c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2c" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3c" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>必要経費</th>
+            <th><input type="text" id="4ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2ne" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3ne" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>消費合計額</th>
+            <th><input type="text" id="4ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2ct" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3ct" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th>翌月繰り越し</th>
+            <th><input type="text" id="4ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="5ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="6ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="7ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="8ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="9ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="10ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="11ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="12ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="1ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="2ca" size="4" class="excel-cell"></th>
+            <th><input type="text" id="3ca" size="4" class="excel-cell"></th>
+        </tr>
+    </table>
+    <br>
+    <p>入力したい月を入れる(※数字のみ)</p>
+    <input type="text" id="select" size="4" class="excel-cell">
+    <br>
+    <br>
+    <input value="消費合計額を計算する" type="button" onclick="ctcalc()" />
+    <input value="翌月繰り越し額を計算する" type="button" onclick="cacalc()" />
+    <input value="入力内容を保存する" type="button" onclick="save()" />
+    <input value="家計簿入力欄の全削除" type="button" onclick="check10()" />
+    <p id="ctcheck"></p>
+    <p id="cacheck"></p>
+    <p id="cfcheck"></p>
+    <p id="savecheck"></p>
+    <p id="check10"></p>
+    <input value="はい" id="yes10" class="yes10" type="button" onclick="del()" />
+    <br />
+    <input value="いいえ" id="no10" class="no10" type="button" onclick="No10()" />
+    <br>
+    <br />
+    <br />
+    <table class="acc">
+        <tr>
+            <th>食費計算枠</th>
+            <th><input type="text" id="e1" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e2" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e3" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e4" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e5" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e6" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e7" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e8" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e9" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e10" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e11" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e12" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="e13" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e14" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e15" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e16" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e17" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e18" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e19" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e20" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e21" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e22" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e23" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e24" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="e25" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e26" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e27" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e28" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e29" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e30" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e31" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e32" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e33" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e34" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e35" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e36" size="4" class="excel-cell"></th>
+        </tr>
+    </table>
+    <br />
+    <input value="計算する" type="button" onclick="eatcalc()" />
+    <input value="削除する" type="button" onclick="Check1()" />
+    <p id="check1"></p>
+    <input value="はい" id="yes1" class="yes1" type="button" onclick="eatdel()" />
+    <br />
+    <input value="いいえ" id="no1" class="no1" type="button" onclick="No1()" />
+    <br>
+    <br>
+    <table class="acc">
+        <tr>
+            <th>遊び計算枠</th>
+            <th><input type="text" id="p1" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p2" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p3" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p4" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p5" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p6" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p7" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p8" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p9" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p10" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p11" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p12" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="p13" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p14" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p15" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p16" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p17" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p18" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p19" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p20" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p21" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p22" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p23" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p24" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="p25" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p26" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p27" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p28" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p29" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p30" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p31" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p32" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p33" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p34" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p35" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p36" size="4" class="excel-cell"></th>
+        </tr>
+    </table>
+    <br />
+    <input value="計算する" type="button" onclick="playcalc()" />
+    <input value="削除する" type="button" onclick="Check2()" />
+    <p id="check2"></p>
+    <input value="はい" id="yes2" class="yes2" type="button" onclick="playdel()" />
+    <br />
+    <input value="いいえ" id="no2" class="no2" type="button" onclick="No2()" />
+    <br>
+    <br>
+    <table class="acc">
+        <tr>
+            <th>必要経費計算枠</th>
+            <th><input type="text" id="ne1" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne2" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne3" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne4" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne5" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne6" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne7" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne8" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne9" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne10" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne11" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne12" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="ne13" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne14" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne15" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne16" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne17" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne18" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne19" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne20" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne21" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne22" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne23" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne24" size="4" class="excel-cell"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="ne25" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne26" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne27" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne28" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne29" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne30" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne31" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne32" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne33" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne34" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne35" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne36" size="4" class="excel-cell"></th>
+        </tr>
+    </table>
+    <br />
+    <input value="計算する" type="button" onclick="expcalc()" />
+    <input value="削除する" type="button" onclick="Check3()" />
+    <p id="check3"></p>
+    <input value="はい" id="yes3" class="yes3" type="button" onclick="expdel()" />
+    <br />
+    <input value="いいえ" id="no3" class="no3" type="button" onclick="No3()" />
+    <br />
+</body>
+</html>
