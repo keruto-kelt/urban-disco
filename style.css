@@ -67,6 +67,57 @@ span.search
     justify-content: space-around;
 }
 
+.excel-cell {
+    width: 100px;
+    height: 24px;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.acc {
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+.acc th, .acc td {
+        border: 3px solid black;
+    }
+
+.yes1 {
+    display:none;
+}
+
+.no1 {
+    display: none;
+}
+
+.yes2 {
+    display: none;
+}
+
+.no2 {
+    display: none;
+}
+
+.yes3 {
+    display: none;
+}
+
+.no3 {
+    display: none;
+}
+
+.yes10 {
+    display: none;
+}
+
+.no10 {
+    display: none;
+}
+
 /**/
 
 .game
