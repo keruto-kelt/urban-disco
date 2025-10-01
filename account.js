@@ -1,9 +1,10 @@
 function send()
 {
     var se = document.getElementById('now');
+    var p = 'p';
     for (var i = 1; i < 37; i++)
     {
-        var p = 'p';
+        p = 'p';
         p += i;
         if (document.getElementById(p).value == "")
         {
