@@ -395,7 +395,8 @@ function save()
         localStorage.setItem(s2, p.value);
         localStorage.setItem(s3, nne.value);
     }
-    document.getElementById("savecheck").innerText = '入力内容が保存されました';
+    document.getElementById("savecheck1").innerText = '入力内容が保存されました';
+    document.getElementById("savecheck2").innerText = '入力内容が保存されました';
 }
 function load()
 {
