@@ -8,7 +8,7 @@ function send()
         if (document.getElementById(p).value == "")
         {
             document.getElementById(p).value = se.value;
-            document.getElementById(nown).innerText = "遊び代計算枠に追加しました";
+            document.getElementById('nown').innerText = "遊び代計算枠に追加しました";
             break;
         }
     }
