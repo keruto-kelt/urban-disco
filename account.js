@@ -1,3 +1,19 @@
+function send()
+{
+    var se = document.getElementById('now');
+    var p = 'p';
+    for (var i = 1; i < 37; i++)
+    {
+        p += i;
+        if (document.getElementById(p).value == "")
+        {
+            document.getElementById(p).value = se.value;
+            document.getElementById(nown).innerText = "遊び代計算枠に追加しました";
+            break;
+        }
+    }
+}
+
 function eatcalc()
 {
     var sum = 0;
