@@ -1,15 +1,250 @@
 function send()
 {
-    var se = document.getElementById('now');
+    var se = document.getElementById('now1');
     var p = 'p';
-    for (var i = 1; i < 37; i++)
+    for (var i = 1; i < 49; i++)
     {
         p = 'p';
         p += i;
         if (document.getElementById(p).value == "")
         {
             document.getElementById(p).value = se.value;
-            document.getElementById('nown').innerText = "遊び代計算枠に追加しました";
+            for (var i = 1; i < 13; i++) {
+                var s = String(i);
+                var s1 = s;
+                s1 += 'cf';
+                var cf = document.getElementById(s1);
+                var s2 = s;
+                s2 += 'i';
+                var ni = document.getElementById(s2);
+                var s3 = s;
+                s3 += 'si';
+                var si = document.getElementById(s3);
+                var s4 = s;
+                s4 += 'r';
+                var r = document.getElementById(s4);
+                var s5 = s;
+                s5 += 'f';
+                var f = document.getElementById(s5);
+                var s6 = s;
+                s6 += 'e';
+                var e = document.getElementById(s6);
+                var s7 = s;
+                s7 += 'w';
+                var w = document.getElementById(s7);
+                var s8 = s;
+                s8 += 't';
+                var t = document.getElementById(s8);
+                var s9 = s;
+                s9 += 'p';
+                var p = document.getElementById(s9);
+                var s10 = s;
+                s10 += 'c';
+                var c = document.getElementById(s10);
+                var s11 = s;
+                s11 += 'ne';
+                var ne = document.getElementById(s11);
+                var s12 = s;
+                s12 += 'ct';
+                var ct = document.getElementById(s12);
+                var s13 = s;
+                s13 += 'ca';
+                var ca = document.getElementById(s13);
+                localStorage.setItem(s1, cf.value);
+                localStorage.setItem(s2, ni.value);
+                localStorage.setItem(s3, si.value);
+                localStorage.setItem(s4, r.value);
+                localStorage.setItem(s5, f.value);
+                localStorage.setItem(s6, e.value);
+                localStorage.setItem(s7, w.value);
+                localStorage.setItem(s8, t.value);
+                localStorage.setItem(s9, p.value);
+                localStorage.setItem(s10, c.value);
+                localStorage.setItem(s11, ne.value);
+                localStorage.setItem(s12, ct.value);
+                localStorage.setItem(s13, ca.value);
+            }
+            for (var j = 1; j < 49; j++) {
+                var s1 = 'e';
+                s1 += String(j);
+                var e = document.getElementById(s1);
+                var s2 = 'p';
+                s2 += String(j);
+                var p = document.getElementById(s2);
+                var s3 = 'ne';
+                s3 += String(j);
+                var nne = document.getElementById(s3);
+                localStorage.setItem(s1, e.value);
+                localStorage.setItem(s2, p.value);
+                localStorage.setItem(s3, nne.value);
+            }
+            alert("遊び代を計算枠に追加しました");
+            break;
+        }
+    }
+}
+
+function eatsend() {
+    var se = document.getElementById('now2');
+    var e = 'e';
+    for (var i = 1; i < 49; i++) {
+        e = 'e';
+        e += i;
+        if (document.getElementById(e).value == "") {
+            document.getElementById(e).value = se.value;
+            for (var i = 1; i < 13; i++) {
+                var s = String(i);
+                var s1 = s;
+                s1 += 'cf';
+                var cf = document.getElementById(s1);
+                var s2 = s;
+                s2 += 'i';
+                var ni = document.getElementById(s2);
+                var s3 = s;
+                s3 += 'si';
+                var si = document.getElementById(s3);
+                var s4 = s;
+                s4 += 'r';
+                var r = document.getElementById(s4);
+                var s5 = s;
+                s5 += 'f';
+                var f = document.getElementById(s5);
+                var s6 = s;
+                s6 += 'e';
+                var e = document.getElementById(s6);
+                var s7 = s;
+                s7 += 'w';
+                var w = document.getElementById(s7);
+                var s8 = s;
+                s8 += 't';
+                var t = document.getElementById(s8);
+                var s9 = s;
+                s9 += 'p';
+                var p = document.getElementById(s9);
+                var s10 = s;
+                s10 += 'c';
+                var c = document.getElementById(s10);
+                var s11 = s;
+                s11 += 'ne';
+                var ne = document.getElementById(s11);
+                var s12 = s;
+                s12 += 'ct';
+                var ct = document.getElementById(s12);
+                var s13 = s;
+                s13 += 'ca';
+                var ca = document.getElementById(s13);
+                localStorage.setItem(s1, cf.value);
+                localStorage.setItem(s2, ni.value);
+                localStorage.setItem(s3, si.value);
+                localStorage.setItem(s4, r.value);
+                localStorage.setItem(s5, f.value);
+                localStorage.setItem(s6, e.value);
+                localStorage.setItem(s7, w.value);
+                localStorage.setItem(s8, t.value);
+                localStorage.setItem(s9, p.value);
+                localStorage.setItem(s10, c.value);
+                localStorage.setItem(s11, ne.value);
+                localStorage.setItem(s12, ct.value);
+                localStorage.setItem(s13, ca.value);
+            }
+            for (var j = 1; j < 49; j++) {
+                var s1 = 'e';
+                s1 += String(j);
+                var e = document.getElementById(s1);
+                var s2 = 'p';
+                s2 += String(j);
+                var p = document.getElementById(s2);
+                var s3 = 'ne';
+                s3 += String(j);
+                var nne = document.getElementById(s3);
+                localStorage.setItem(s1, e.value);
+                localStorage.setItem(s2, p.value);
+                localStorage.setItem(s3, nne.value);
+            }
+            alert("食費を計算枠に追加しました");
+            break;
+        }
+    }
+}
+
+function nesend() {
+    var se = document.getElementById('now3');
+    var ne = 'ne';
+    for (var i = 1; i < 49; i++) {
+        ne = 'ne';
+        ne += i;
+        if (document.getElementById(ne).value == "") {
+            document.getElementById(ne).value = se.value;
+            for (var i = 1; i < 13; i++) {
+                var s = String(i);
+                var s1 = s;
+                s1 += 'cf';
+                var cf = document.getElementById(s1);
+                var s2 = s;
+                s2 += 'i';
+                var ni = document.getElementById(s2);
+                var s3 = s;
+                s3 += 'si';
+                var si = document.getElementById(s3);
+                var s4 = s;
+                s4 += 'r';
+                var r = document.getElementById(s4);
+                var s5 = s;
+                s5 += 'f';
+                var f = document.getElementById(s5);
+                var s6 = s;
+                s6 += 'e';
+                var e = document.getElementById(s6);
+                var s7 = s;
+                s7 += 'w';
+                var w = document.getElementById(s7);
+                var s8 = s;
+                s8 += 't';
+                var t = document.getElementById(s8);
+                var s9 = s;
+                s9 += 'p';
+                var p = document.getElementById(s9);
+                var s10 = s;
+                s10 += 'c';
+                var c = document.getElementById(s10);
+                var s11 = s;
+                s11 += 'ne';
+                var ne = document.getElementById(s11);
+                var s12 = s;
+                s12 += 'ct';
+                var ct = document.getElementById(s12);
+                var s13 = s;
+                s13 += 'ca';
+                var ca = document.getElementById(s13);
+                localStorage.setItem(s1, cf.value);
+                localStorage.setItem(s2, ni.value);
+                localStorage.setItem(s3, si.value);
+                localStorage.setItem(s4, r.value);
+                localStorage.setItem(s5, f.value);
+                localStorage.setItem(s6, e.value);
+                localStorage.setItem(s7, w.value);
+                localStorage.setItem(s8, t.value);
+                localStorage.setItem(s9, p.value);
+                localStorage.setItem(s10, c.value);
+                localStorage.setItem(s11, ne.value);
+                localStorage.setItem(s12, ct.value);
+                localStorage.setItem(s13, ca.value);
+            }
+            for (var j = 1; j < 49; j++) {
+                var s1 = 'e';
+                s1 += String(j);
+                var e = document.getElementById(s1);
+                var s2 = 'p';
+                s2 += String(j);
+                var p = document.getElementById(s2);
+                var s3 = 'ne';
+                s3 += String(j);
+                var nne = document.getElementById(s3);
+                localStorage.setItem(s1, e.value);
+                localStorage.setItem(s2, p.value);
+                localStorage.setItem(s3, nne.value);
+            }
+            alert("必要経費を計算枠に追加しました");
             break;
         }
     }
@@ -19,7 +254,7 @@ function eatcalc()
 {
     var sum = 0;
     var select = document.getElementById('select');
-    for (var i = 1; i < 37; i++)
+    for (var i = 1; i < 49; i++)
     {
         var s = 'e';
         s += String(i);
@@ -35,24 +270,25 @@ function eatcalc()
             s += 'f';
             var e = document.getElementById(s);
             e.value = sum;
-            ss += '月の食費代を計算しました';
-            document.getElementById("check1").innerText = ss;
+            alert(ss + "月の食事代を計算しました");
             break;
         }
     }
 }
 function eatdel()
 {
-    document.getElementById("check1").innerText = '食費代計算枠の内容を全て削除しました';
-    document.getElementById('yes1').style.display = 'none';
-    document.getElementById('no1').style.display = 'none';
-    for (var i = 1; i < 37; i++)
+    for (var i = 1; i < 49; i++)
     {
         var s = 'e';
         s += String(i);
         var e = document.getElementById(s);
+        localStorage.setItem(s, '');
         e.value = '';
     }
+    document.getElementById('yes1').style.display = 'none';
+    document.getElementById('no1').style.display = 'none';
+    document.getElementById('check1').style.display = 'none';
+    alert("食費代計算枠の内容を全て削除しました。");
 }
 function Check1()
 {
@@ -71,7 +307,7 @@ function playcalc()
 {
     var sum = 0;
     var select = document.getElementById('select');
-    for (var i = 1; i < 37; i++) {
+    for (var i = 1; i < 49; i++) {
         var s = 'p';
         s += String(i);
         var e = document.getElementById(s);
@@ -84,22 +320,23 @@ function playcalc()
             s += 'p';
             var e = document.getElementById(s);
             e.value = sum;
-            ss += '月の遊び代を計算しました';
-            document.getElementById("check2").innerText = ss;
+            alert(ss + "月の遊び代を計算しました");
             break;
         }
     }
 }
 function playdel() {
-    document.getElementById("check2").innerText = '遊び代計算枠の内容を全て削除しました';
-    document.getElementById('yes2').style.display = 'none';
-    document.getElementById('no2').style.display = 'none';
-    for (var i = 1; i < 37; i++) {
+    for (var i = 1; i < 49; i++) {
         var s = 'p';
         s += String(i);
         var e = document.getElementById(s);
+        localStorage.setItem(s, '');
         e.value = '';
     }
+    document.getElementById("check2").innerText = '';
+    document.getElementById('yes2').style.display = 'none';
+    document.getElementById('no2').style.display = 'none';
+    alert("遊び代計算枠の内容を全て削除しました");
 }
 function Check2() {
     document.getElementById("check2").innerText = '遊び代計算枠の内容を全て削除しますか?';
@@ -115,7 +352,7 @@ function No2() {
 function expcalc() {
     var sum = 0;
     var select = document.getElementById('select');
-    for (var i = 1; i < 37; i++) {
+    for (var i = 1; i < 49; i++) {
         var s = 'ne';
         s += String(i);
         var e = document.getElementById(s);
@@ -128,22 +365,23 @@ function expcalc() {
             s += 'ne';
             var e = document.getElementById(s);
             e.value = sum;
-            ss += '月の必要経費を計算しました';
-            document.getElementById("check3").innerText = ss;
+            alert(ss + "月の必要経費代を計算しました");
             break;
         }
     }
 }
 function expdel() {
-    document.getElementById("check3").innerText = '必要経費代計算枠の内容を全て削除しました';
-    document.getElementById('yes3').style.display = 'none';
-    document.getElementById('no3').style.display = 'none';
-    for (var i = 1; i < 37; i++) {
+    for (var i = 1; i < 49; i++) {
         var s = 'ne';
         s += String(i);
         var e = document.getElementById(s);
+        localStorage.setItem(s, '');
         e.value = '';
     }
+    document.getElementById("check3").innerText = '';
+    document.getElementById('yes3').style.display = 'none';
+    document.getElementById('no3').style.display = 'none';
+    alert("必要経費代計算枠の内容を全て削除しました");
 }
 function Check3() {
     document.getElementById("check3").innerText = '必要経費代計算枠の内容を全て削除しますか?';
@@ -166,9 +404,6 @@ function No10() {
     document.getElementById('no10').style.display = 'none';
 }
 function del() {
-    document.getElementById("check10").innerText = '家計簿欄の内容を全て削除しました';
-    document.getElementById('yes10').style.display = 'none';
-    document.getElementById('no10').style.display = 'none';
     for (var i = 1; i < 13; i++) {
         var s = '';
         s += String(i);
@@ -260,6 +495,10 @@ function del() {
         var e = document.getElementById(s);
         e.value = '';
     }
+    document.getElementById("check10").innerText = '';
+    document.getElementById('yes10').style.display = 'none';
+    document.getElementById('no10').style.display = 'none';
+    alert("家計簿内の内容を全て削除しました");
 }
 
 function ctcalc()
@@ -295,8 +534,7 @@ function ctcalc()
     s += 'ct';
     var e = document.getElementById(s);
     e.value = sum;
-    ss += '月の消費合計額を計算しました';
-    document.getElementById("ctcheck").innerText = ss;
+    alert(ss + "月の消費合計代を計算しました");
 }
 
 function cacalc() {
@@ -319,8 +557,7 @@ function cacalc() {
     s += 'ca';
     var e = document.getElementById(s);
     e.value = sum;
-    ss += '月の翌月繰り越し額を計算しました';
-    document.getElementById("cacheck").innerText = ss;
+    alert(ss + "月の翌月繰り越し額を計算しました");
 }
 function save()
 {
@@ -380,7 +617,7 @@ function save()
         localStorage.setItem(s12, ct.value);
         localStorage.setItem(s13, ca.value);
     }
-    for (var j = 1; j < 37; j++)
+    for (var j = 1; j < 49; j++)
     {
         var s1 = 'e';
         s1 += String(j);
@@ -395,8 +632,38 @@ function save()
         localStorage.setItem(s2, p.value);
         localStorage.setItem(s3, nne.value);
     }
-    document.getElementById("savecheck1").innerText = '入力内容が保存されました';
-    document.getElementById("savecheck2").innerText = '入力内容が保存されました';
+    alert("入力内容が保存されました");
+}
+function eatsave1()
+{
+    for (var j = 1; j < 49; j++)
+    {
+        var s1 = 'e';
+        s1 += String(j);
+        var e = document.getElementById(s1);
+        localStorage.setItem(s1, e.value);
+    }
+    alert("食費計算枠の入力内容が保存されました");
+}
+
+function psave2() {
+    for (var j = 1; j < 49; j++) {
+        var s1 = 'p';
+        s1 += String(j);
+        var e = document.getElementById(s1);
+        localStorage.setItem(s1, e.value);
+    }
+    alert("遊び代計算枠の入力内容が保存されました");
+}
+
+function nesave3() {
+    for (var j = 1; j < 49; j++) {
+        var s1 = 'ne';
+        s1 += String(j);
+        var e = document.getElementById(s1);
+        localStorage.setItem(s1, e.value);
+    }
+    alert("必要経費計算枠の入力内容が保存されました");
 }
 function load()
 {
@@ -531,7 +798,7 @@ function load()
             ca.value = mydata;
         }
     }
-    for (var j = 1; j < 37; j++)
+    for (var j = 1; j < 49; j++)
     {
         var s = String(j);
         var s1 = 'e';
