@@ -8,11 +8,16 @@
 </head>
 <body onload="load()">
     <h1>Savannah</h1>
-    <p>とりあえず入力欄</p>
-    <input type="text" id="now" size="10" class="excel-cell">
+    <p>とりあえず遊び代入力欄</p>
+    <input type="text" id="now1" size="10" class="excel-cell">
     <input value="送信" type="button" onclick="send()" />
-　　<input value="入力内容を保存する" type="button" onclick="save()" />
-　　<p id="nown"></p>
+    <p>とりあえず食費入力欄</p>
+    <input type="text" id="now2" size="10" class="excel-cell">
+    <input value="送信" type="button" onclick="eatsend()" />
+    <p>とりあえず必要経費入力欄</p>
+    <input type="text" id="now3" size="10" class="excel-cell">
+    <input value="送信" type="button" onclick="nesend()" />
+    <p id="nown"></p>
     <p id="savecheck1"></p>
     <p id="today"></p>
     <table class="acc">
@@ -293,10 +298,26 @@
             <th><input type="text" id="e35" size="4" class="excel-cell"></th>
             <th><input type="text" id="e36" size="4" class="excel-cell"></th>
         </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="e37" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e38" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e39" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e40" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e41" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e42" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e43" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e44" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e45" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e46" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e47" size="4" class="excel-cell"></th>
+            <th><input type="text" id="e48" size="4" class="excel-cell"></th>
+        </tr>
     </table>
     <br />
     <input value="計算する" type="button" onclick="eatcalc()" />
     <input value="削除する" type="button" onclick="Check1()" />
+    <input value="保存する" type="button" onclick="eatsave1()" />
     <p id="check1"></p>
     <input value="はい" id="yes1" class="yes1" type="button" onclick="eatdel()" />
     <br />
@@ -349,10 +370,26 @@
             <th><input type="text" id="p35" size="4" class="excel-cell"></th>
             <th><input type="text" id="p36" size="4" class="excel-cell"></th>
         </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="p37" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p38" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p39" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p40" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p41" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p42" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p43" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p44" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p45" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p46" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p47" size="4" class="excel-cell"></th>
+            <th><input type="text" id="p48" size="4" class="excel-cell"></th>
+        </tr>
     </table>
     <br />
     <input value="計算する" type="button" onclick="playcalc()" />
     <input value="削除する" type="button" onclick="Check2()" />
+    <input value="保存する" type="button" onclick="psave2()" />
     <p id="check2"></p>
     <input value="はい" id="yes2" class="yes2" type="button" onclick="playdel()" />
     <br />
@@ -405,10 +442,26 @@
             <th><input type="text" id="ne35" size="4" class="excel-cell"></th>
             <th><input type="text" id="ne36" size="4" class="excel-cell"></th>
         </tr>
+        <tr>
+            <th></th>
+            <th><input type="text" id="ne37" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne38" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne39" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne40" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne41" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne42" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne43" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne44" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne45" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne46" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne47" size="4" class="excel-cell"></th>
+            <th><input type="text" id="ne48" size="4" class="excel-cell"></th>
+        </tr>
     </table>
     <br />
     <input value="計算する" type="button" onclick="expcalc()" />
     <input value="削除する" type="button" onclick="Check3()" />
+    <input value="保存する" type="button" onclick="nesave3()" />
     <p id="check3"></p>
     <input value="はい" id="yes3" class="yes3" type="button" onclick="expdel()" />
     <br />
