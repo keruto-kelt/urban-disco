@@ -79,6 +79,7 @@ function send()
                 localStorage.setItem(s3, nne.value);
             }
             alert("遊び代を計算枠に追加しました");
+            se.value = "";
             break;
         }
     }
@@ -162,6 +163,7 @@ function eatsend() {
                 localStorage.setItem(s3, nne.value);
             }
             alert("食費を計算枠に追加しました");
+            se.value = "";
             break;
         }
     }
@@ -245,6 +247,7 @@ function nesend() {
                 localStorage.setItem(s3, nne.value);
             }
             alert("必要経費を計算枠に追加しました");
+            se.value = "";
             break;
         }
     }
