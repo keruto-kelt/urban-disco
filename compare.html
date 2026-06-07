@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>目黒区価格比較</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="comp.js"></script>
+    <style>
+        table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    table-layout: fixed;
+    width: 420px;
+}
+
+th, td {
+    border: 1px solid #000;
+    height: 35px;
+    padding: 4px;
+}
+
+.col-name {
+    width: 180px;
+}
+
+.col-price {
+    width: 140px;
+}
+
+.col-action {
+    width: 100px;
+}
+
+input {
+    width: calc(100% - 10px);
+    height: 24px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 2px 4px;
+}
+
+td:last-child {
+        text-align: center;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h1>Savannah</h1>
+    &emsp;
+    <a href="https://keruto-kelt.github.io/urban-disco/index.html">ホームへ戻る</a>
+    <br />
+    <h2>
+        価格比較表(目黒区)
+    </h2>
+    <table id="itemTable">
+        <colgroup>
+            <col class="col-name">
+            <col class="col-price">
+            <col class="col-action">
+        </colgroup>
+
+        <tr>
+            <th colspan="3">業務スーパー</th>
+        </tr>
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="商品名">
+            </td>
+            <td>
+                <input type="number" class="price" placeholder="価格">
+            </td>
+            <td>
+            <button type="button" onclick="deleteRow(this)">
+                削除
+            </button>
+        </td>
+        </tr>
+    </table>
+    <br>
+    <button type="button" onclick="addRow('','',true)">行追加</button>
+    <br>
+    <br>
+    <button type="button" onclick="saveTable(true)">保存</button>
+</body>
+</html>
