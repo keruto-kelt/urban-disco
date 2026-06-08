@@ -43,6 +43,39 @@ input {
 td:last-child {
         text-align: center;
         }
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-name {
+    font-weight: bold;
+}
+
+.search-hit {
+    background-color: yellow !important;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    text-align: center;
+}
+
     </style>
 </head>
 <body onload="load()">
@@ -53,39 +86,43 @@ td:last-child {
     <h2>
         価格比較表(目黒区)
     </h2>
-    <table id="itemTable">
-        <colgroup>
-            <col class="col-name">
-            <col class="col-price">
-            <col class="col-action">
-        </colgroup>
+    
+    <button type="button" onclick="searchItem()">
+    商品検索
+    </button>
+    &emsp;
+    <button type="button" onclick="saveTable(true)">
+        保存
+    </button>
+    &emsp;
+    <button type="button" onclick="createShop()">
+        店舗追加
+    </button>
+    <div id="searchPopup" class="popup" style="display:none;">
+    <div class="popup-content">
 
-        <tr>
-            <th colspan="3">業務スーパー</th>
-        </tr>
-        <tr>
-            <th>商品名</th>
-            <th>価格</th>
-            <th>操作</th>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" placeholder="商品名">
-            </td>
-            <td>
-                <input type="number" class="price" placeholder="価格">
-            </td>
-            <td>
-            <button type="button" onclick="deleteRow(this)">
-                削除
-            </button>
-        </td>
-        </tr>
-    </table>
-    <br>
-    <button type="button" onclick="addRow('','',true)">行追加</button>
+        <h3>検索結果</h3>
+
+        <p id="searchInfo"></p>
+
+        <button onclick="prevSearchResult()">
+            前へ
+        </button>
+
+        <button onclick="nextSearchResult()">
+            次へ
+        </button>
+
+        <button onclick="closeSearchPopup()">
+            閉じる
+        </button>
+
+    </div>
+</div>
     <br>
     <br>
-    <button type="button" onclick="saveTable(true)">保存</button>
+    <div id="tableContainer"></div>
+    <br>
+    <br>
 </body>
 </html>
